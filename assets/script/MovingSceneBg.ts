@@ -26,17 +26,19 @@ export class MovingSceneBg extends Component {
   }
 
   private _moveBackground(deltaTime: number) {
-    const bgMovingSize = this._bgSpeed * deltaTime;
+    const bgMovingSizeZ = this._bgSpeed * deltaTime;
 
-    this._movingBg(this.bg01, bgMovingSize);
-    this._movingBg(this.bg02, bgMovingSize);
+    this._movingBg(this.bg01, bgMovingSizeZ);
+    this._movingBg(this.bg02, bgMovingSizeZ);
   }
 
-  private _movingBg(bg: Node, bgMovingSize: number) {
-    if (bg.position.z + bgMovingSize > this._bgMovingRange) {
-      bg.setPosition(0, 0, -this._bgMovingRange);
+  private _movingBg(bg: Node, bgMovingSizeZ: number) {
+    const bgTargetPositionZ = bg.position.z + bgMovingSizeZ;
+
+    if (bgTargetPositionZ > this._bgMovingRange) {
+      bg.setPosition(0, 0, bgTargetPositionZ - 2 * this._bgMovingRange);
     } else {
-      bg.setPosition(0, 0, bg.position.z + bgMovingSize);
+      bg.setPosition(0, 0, bgTargetPositionZ);
     }
   }
 }
