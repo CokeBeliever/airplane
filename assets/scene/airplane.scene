@@ -879,6 +879,17 @@
     "bulletRoot": {
       "__id__": 36
     },
+    "enemy01": {
+      "__uuid__": "cc832005-2b2b-43f4-8af3-78f8a9f133d8",
+      "__expectedType__": "cc.Prefab"
+    },
+    "enemy02": {
+      "__uuid__": "1eb1ec88-957f-4422-a8ef-82c94679ad4f",
+      "__expectedType__": "cc.Prefab"
+    },
+    "createEnemyTime": 1,
+    "enemy1Speed": 0.5,
+    "enemy2Speed": 0.7,
     "_id": "d9HIdsXDJBkpPqEex1VfQ9"
   },
   {

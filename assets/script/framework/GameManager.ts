@@ -1,5 +1,7 @@
-import { _decorator, Component, instantiate, Node, Prefab } from 'cc';
+import { _decorator, Component, instantiate, math, Node, Prefab } from 'cc';
 import { Bullet } from '../bullet/Bullet';
+import { Constant } from './Constant';
+import { EnemyPlane } from '../plane/EnemyPlane';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -31,8 +33,26 @@ export class GameManager extends Component {
     @property(Node)
     public bulletRoot: Node = null;
 
+    @property(Prefab)
+    public enemy01: Prefab = null;
+
+    @property(Prefab)
+    public enemy02: Prefab = null;
+
+    @property
+    public createEnemyTime = 1;
+
+    @property
+    public enemy1Speed = 0.5;
+
+    @property
+    public enemy2Speed = 0.7;
+
     private _currShootTime = 0;
     private _isShooting = false;
+
+    private _currCreateEnemyTime = 0;
+    private _combintionInterval = Constant.Combination.PLAN1;
 
     start() {
         this._init();
@@ -44,10 +64,23 @@ export class GameManager extends Component {
             this.createPlayerBullet();
             this._currShootTime = 0;
         }
+
+        if (this._combintionInterval === Constant.Combination.PLAN1) {
+            this._currCreateEnemyTime += deltaTime;
+            if (this._currCreateEnemyTime > this.createEnemyTime) {
+                this.createEnemyPlane();
+                this._currCreateEnemyTime = 0;
+            }
+        } else if (this._combintionInterval === Constant.Combination.PLAN2) {
+
+        } else {
+
+        }
     }
 
     private _init() {
         this._currShootTime = this.shootTime;
+        this._changePlaneMode();
     }
 
     public createPlayerBullet() {
@@ -61,6 +94,35 @@ export class GameManager extends Component {
 
     public isShooting(value: boolean) {
         this._isShooting = value;
+    }
+
+    private _changePlaneMode() {
+        this.schedule(this._modeChanged, 10, 3);
+    }
+
+    private _modeChanged() {
+        this._combintionInterval++;
+    }
+
+    public createEnemyPlane() {
+        const enemyType = math.randomRangeInt(1, 3);
+        let prefab: Prefab = null;
+        let speed = 0;
+
+        if (enemyType === Constant.EnemyType.TYPE1) {
+            prefab = this.enemy01;
+            speed = this.enemy1Speed;
+        } else {
+            prefab = this.enemy02;
+            speed = this.enemy2Speed;
+        }
+
+        const enemy = instantiate(prefab);
+        enemy.setParent(this.bulletRoot);
+        const randomPos = math.randomRange(-25, 26);
+        enemy.setPosition(randomPos, 0, -50);
+        const enemyComp = enemy.getComponent(EnemyPlane);
+        enemyComp.show(speed);
     }
 }
 
