@@ -1,4 +1,4 @@
-import { _decorator, Component, instantiate, math, Node, Prefab } from 'cc';
+import { _decorator, Collider, Component, instantiate, math, Node, Prefab } from 'cc';
 import { Bullet } from '../bullet/Bullet';
 import { Constant } from './Constant';
 import { EnemyPlane } from '../plane/EnemyPlane';
@@ -115,6 +115,10 @@ export class GameManager extends Component {
         bullet.setPosition(pos.x, pos.y, pos.z + 6);
         const bulletComp = bullet.getComponent(Bullet);
         bulletComp.show(this.bulletSpeed, true);
+        
+        const colliderComp = bullet.getComponent(Collider);
+        colliderComp.setGroup(Constant.CollisionType.ENEMY_BULLET);
+        colliderComp.setMask(Constant.CollisionType.SELF_PLANE);
     }
 
     public isShooting(value: boolean) {
@@ -183,6 +187,10 @@ export class GameManager extends Component {
             const enemyComp = element.getComponent(EnemyPlane);
             enemyComp.show(this, this.enemy2Speed, false);
         }
+    }
+
+    public addScore() {
+
     }
 }
 
