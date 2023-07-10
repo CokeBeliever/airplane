@@ -29,7 +29,7 @@ export class GameManager extends Component {
     public bulletSpeed = 1;
 
     @property(Node)
-    public bulletRoot: null = null;
+    public bulletRoot: Node = null;
 
     private _currShootTime = 0;
     private _isShooting = false;
