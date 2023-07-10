@@ -24,11 +24,11 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 12
+        "__id__": 14
       }
     ],
     "_prefab": {
-      "__id__": 14
+      "__id__": 16
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -107,6 +107,9 @@
       },
       {
         "__id__": 10
+      },
+      {
+        "__id__": 12
       }
     ],
     "removedComponents": []
@@ -194,6 +197,27 @@
     ]
   },
   {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 13
+    },
+    "propertyPath": [
+      "_lpos"
+    ],
+    "value": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": -6.493302295836753e-17,
+      "z": -2.244485108991186e-17
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "31VYT2N+FSqrMp+0y8qB85"
+    ]
+  },
+  {
     "__type__": "4aab7OOzLdPl7ftCk35ECRA",
     "_name": "",
     "_objFlags": 0,
@@ -202,9 +226,10 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 13
+      "__id__": 15
     },
-    "enemySpeed": 0,
+    "_gameManager": null,
+    "createBulletTime": 0.5,
     "_id": ""
   },
   {

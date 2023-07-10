@@ -6,7 +6,10 @@ const OUTOFRANGE = 50;
 @ccclass('Bullet')
 export class Bullet extends Component {
     @property
-    public bulletSpeed = 0;
+    private _bulletSpeed = 0;
+
+    @property
+    private _isEnemyPlane = false;
     
     start() {
 
@@ -14,13 +17,18 @@ export class Bullet extends Component {
 
     update(deltaTime: number) {
         const pos = this.node.position;
-        const moveLength = pos.z - this.bulletSpeed;
+        const moveLength = pos.z + (this._isEnemyPlane ? this._bulletSpeed : -this._bulletSpeed);
         this.node.setPosition(pos.x, pos.y, moveLength);
 
-        if (moveLength > OUTOFRANGE) {
+        if (this._isEnemyPlane ? moveLength > OUTOFRANGE : moveLength < -OUTOFRANGE) {
             this.node.destroy();
             console.log('bullet destroy');
         }
+    }
+
+    show(speed: number, isEnemyPlane: boolean) {
+        this._bulletSpeed = speed;
+        this._isEnemyPlane = isEnemyPlane;
     }
 }
 

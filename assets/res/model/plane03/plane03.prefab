@@ -205,6 +205,13 @@
       "__id__": 13
     },
     "enemySpeed": 0,
+    "enemyBullet": false,
+    "bullet": {
+      "__uuid__": "09dc3c5c-5887-4eee-8391-339283fcfc2b",
+      "__expectedType__": "cc.Prefab"
+    },
+    "shootTime": 0.3,
+    "bulletRoot": null,
     "_id": ""
   },
   {
