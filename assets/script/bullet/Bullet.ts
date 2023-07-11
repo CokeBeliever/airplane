@@ -6,10 +6,8 @@ const OUTOFRANGE = 50;
 
 @ccclass("Bullet")
 export class Bullet extends Component {
-  @property
   private _bulletSpeed = 0;
-
-  @property
+  private _direction = Constant.Direction.MIDDLE;
   private _isEnemyPlane = false;
 
   start() {}
@@ -18,7 +16,14 @@ export class Bullet extends Component {
     const pos = this.node.position;
     const moveLength =
       pos.z + (this._isEnemyPlane ? this._bulletSpeed : -this._bulletSpeed);
-    this.node.setPosition(pos.x, pos.y, moveLength);
+
+    if (this._direction === Constant.Direction.LEFT) {
+      this.node.setPosition(pos.x - this._bulletSpeed, pos.y, moveLength);
+    } else if (this._direction === Constant.Direction.RIGHT) {
+      this.node.setPosition(pos.x + this._bulletSpeed, pos.y, moveLength);
+    } else {
+      this.node.setPosition(pos.x, pos.y, moveLength);
+    }
 
     if (
       this._isEnemyPlane ? moveLength > OUTOFRANGE : moveLength < -OUTOFRANGE
@@ -37,8 +42,9 @@ export class Bullet extends Component {
     collider.off("onTriggerEnter", this._onTriggerEnter, this);
   }
 
-  show(speed: number, isEnemyPlane: boolean) {
+  show(speed: number, isEnemyPlane: boolean, direction: number = Constant.Direction.MIDDLE) {
     this._bulletSpeed = speed;
+    this._direction = direction;
     this._isEnemyPlane = isEnemyPlane;
   }
 
