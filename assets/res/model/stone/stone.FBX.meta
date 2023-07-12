@@ -2,12 +2,12 @@
   "ver": "2.3.4",
   "importer": "fbx",
   "imported": true,
-  "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791",
+  "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c",
   "files": [],
   "subMetas": {
     "32630": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@32630",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@32630",
       "displayName": "",
       "id": "32630",
       "name": "stone13.mesh",
@@ -24,7 +24,7 @@
     },
     "645cc": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@645cc",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@645cc",
       "displayName": "",
       "id": "645cc",
       "name": "stone02.mesh",
@@ -41,7 +41,7 @@
     },
     "6dfd9": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@6dfd9",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@6dfd9",
       "displayName": "",
       "id": "6dfd9",
       "name": "stone03.mesh",
@@ -58,7 +58,7 @@
     },
     "375a8": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@375a8",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@375a8",
       "displayName": "",
       "id": "375a8",
       "name": "stone04.mesh",
@@ -75,7 +75,7 @@
     },
     "ee276": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@ee276",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@ee276",
       "displayName": "",
       "id": "ee276",
       "name": "stone05.mesh",
@@ -92,7 +92,7 @@
     },
     "f78c4": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@f78c4",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@f78c4",
       "displayName": "",
       "id": "f78c4",
       "name": "stone06.mesh",
@@ -109,7 +109,7 @@
     },
     "0cbd1": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@0cbd1",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@0cbd1",
       "displayName": "",
       "id": "0cbd1",
       "name": "stone07.mesh",
@@ -126,7 +126,7 @@
     },
     "dd95a": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@dd95a",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@dd95a",
       "displayName": "",
       "id": "dd95a",
       "name": "stone08.mesh",
@@ -143,7 +143,7 @@
     },
     "699a3": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@699a3",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@699a3",
       "displayName": "",
       "id": "699a3",
       "name": "stone09.mesh",
@@ -160,7 +160,7 @@
     },
     "671f5": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@671f5",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@671f5",
       "displayName": "",
       "id": "671f5",
       "name": "stone10.mesh",
@@ -177,7 +177,7 @@
     },
     "d4e1f": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@d4e1f",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@d4e1f",
       "displayName": "",
       "id": "d4e1f",
       "name": "stone11.mesh",
@@ -194,7 +194,7 @@
     },
     "de77e": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@de77e",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@de77e",
       "displayName": "",
       "id": "de77e",
       "name": "stone12.mesh",
@@ -211,7 +211,7 @@
     },
     "ad41d": {
       "importer": "gltf-mesh",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@ad41d",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@ad41d",
       "displayName": "",
       "id": "ad41d",
       "name": "stone01.mesh",
@@ -228,7 +228,7 @@
     },
     "4de10": {
       "importer": "gltf-material",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@4de10",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@4de10",
       "displayName": "",
       "id": "4de10",
       "name": "stone.material",
@@ -244,7 +244,7 @@
     },
     "afe38": {
       "importer": "gltf-scene",
-      "uuid": "69748f27-2ebe-4008-b218-7ea976ff0791@afe38",
+      "uuid": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@afe38",
       "displayName": "",
       "id": "afe38",
       "name": "stone.prefab",
@@ -261,34 +261,36 @@
   },
   "userData": {
     "imageMetas": [],
-    "fbx": {
-      "smartMaterialEnabled": true
-    },
-    "redirect": "69748f27-2ebe-4008-b218-7ea976ff0791@afe38",
+    "legacyFbxImporter": false,
+    "redirect": "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@afe38",
     "assetFinder": {
       "meshes": [
-        "69748f27-2ebe-4008-b218-7ea976ff0791@32630",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@645cc",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@6dfd9",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@375a8",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@ee276",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@f78c4",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@0cbd1",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@dd95a",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@699a3",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@671f5",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@d4e1f",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@de77e",
-        "69748f27-2ebe-4008-b218-7ea976ff0791@ad41d"
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@32630",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@645cc",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@6dfd9",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@375a8",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@ee276",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@f78c4",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@0cbd1",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@dd95a",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@699a3",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@671f5",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@d4e1f",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@de77e",
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@ad41d"
       ],
       "skeletons": [],
       "textures": [],
       "materials": [
-        "69748f27-2ebe-4008-b218-7ea976ff0791@4de10"
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@4de10"
       ],
       "scenes": [
-        "69748f27-2ebe-4008-b218-7ea976ff0791@afe38"
+        "9cad9c9d-42cc-4a14-a160-dd353bd95c6c@afe38"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false,
+      "smartMaterialEnabled": false
     }
   }
 }

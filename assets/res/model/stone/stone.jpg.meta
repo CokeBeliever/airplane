@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "58e20b86-160b-421e-83c5-0873f541d642",
+  "uuid": "b0c9791b-993a-433b-bc32-165308ec14a9",
   "files": [
     ".jpg",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "58e20b86-160b-421e-83c5-0873f541d642@6c48a",
+      "uuid": "b0c9791b-993a-433b-bc32-165308ec14a9@6c48a",
       "displayName": "stone",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "58e20b86-160b-421e-83c5-0873f541d642",
+        "imageUuidOrDatabaseUri": "b0c9791b-993a-433b-bc32-165308ec14a9",
         "visible": true
       },
       "ver": "1.0.22",
@@ -34,9 +34,9 @@
     }
   },
   "userData": {
-    "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": false,
     "type": "texture",
-    "redirect": "58e20b86-160b-421e-83c5-0873f541d642@6c48a"
+    "redirect": "b0c9791b-993a-433b-bc32-165308ec14a9@6c48a",
+    "fixAlphaTransparencyArtifacts": false
   }
 }

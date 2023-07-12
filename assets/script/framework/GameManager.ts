@@ -58,6 +58,10 @@ export class GameManager extends Component {
   /** 预制敌机 02 */
   public enemy02: Prefab = null;
 
+  @property(Prefab)
+  /** 预制敌机爆炸 */
+  public enemyExplode: Prefab = null;
+
   @property
   /** 创建敌机间隔 */
   public createEnemyTime = 1;
@@ -330,6 +334,15 @@ export class GameManager extends Component {
       const enemyComp = element.getComponent(EnemyPlane);
       enemyComp.show(this, this.enemy2Speed, false);
     }
+  }
+
+  /**
+   * 创建敌机爆炸
+   */
+  public createEnemyExplode(node: Node) {
+    const pos = node.position;
+    const enemyExplode = poolManager.getNode(this.enemyExplode, this.bulletRoot);
+    enemyExplode.setPosition(pos.x, pos.y, pos.z);
   }
 
   /**
