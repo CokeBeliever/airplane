@@ -1,4 +1,4 @@
-import { _decorator, Collider, Component, ITriggerEvent } from "cc";
+import { _decorator, AudioSource, Collider, Component, ITriggerEvent } from "cc";
 import { Constant } from "../framework/Constant";
 const { ccclass } = _decorator;
 
@@ -10,12 +10,16 @@ export class SelfPlane extends Component {
   /** 当前生命值 */
   private _currLife = this.lifeValue;
 
+  private _audioSource: AudioSource = null;
+
   /** 是否已死亡 */
   get isDie() {
     return this._currLife <= 0;
   }
 
-  start() {}
+  start() {
+    this._audioSource = this.getComponent(AudioSource);
+  }
 
   update(deltaTime: number) {}
 
@@ -36,6 +40,10 @@ export class SelfPlane extends Component {
       collisionGroup === Constant.CollisionType.ENEMY_BULLET
     ) {
       this._currLife--;
+
+      if (this._currLife <= 0) {
+        this._audioSource.play();
+      }
     }
   }
 

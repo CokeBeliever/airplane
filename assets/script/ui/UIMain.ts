@@ -75,6 +75,7 @@ export class UIMain extends Component {
    */
   reStart() {
     this.gameManager.initGame();
+    this.gameManager.playAudioEffect("button");
   }
 
   /**
@@ -82,6 +83,7 @@ export class UIMain extends Component {
    */
   returnMain() {
     this.gameManager.initGameStart();
+    this.gameManager.playAudioEffect("button");
   }
 
   /**
@@ -92,6 +94,7 @@ export class UIMain extends Component {
       this.gameManager.isShooting(true);
     } else if (this.gameManager.gameState === Constant.GameState.GAME_START) {
       this.gameManager.initGame();
+      this.gameManager.playAudioEffect("button");
     }
   }
 
@@ -115,7 +118,7 @@ export class UIMain extends Component {
    */
   private _touchEnd(event: EventTouch) {
     if (this.gameManager.gameState !== Constant.GameState.GAME) return;
-    
+
     this.gameManager.isShooting(false);
   }
 }

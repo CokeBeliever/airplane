@@ -63,6 +63,7 @@ export class EnemyPlane extends Component {
     ) {
         this.node.destroy();
         this._gameManager.addScore();
+        this._gameManager.playAudioEffect('enemy');
     }
   }
 }

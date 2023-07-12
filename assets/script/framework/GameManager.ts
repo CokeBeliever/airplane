@@ -15,6 +15,7 @@ import { EnemyPlane } from "../plane/EnemyPlane";
 import { BulletProp } from "../bullet/BulletProp";
 import { SelfPlane } from "../plane/SelfPlane";
 import { UIMain } from "../ui/UIMain";
+import { AudioManager } from "./AudioManager";
 const { ccclass, property } = _decorator;
 
 @ccclass("GameManager")
@@ -96,11 +97,16 @@ export class GameManager extends Component {
   public gameOverScore: Label = null;
 
   @property(SelfPlane)
-  /** 玩家飞机 */
+  /** 玩家飞机实例 */
   public playerPlane: SelfPlane = null;
 
   @property(UIMain)
+  /** UIMain 实例 */
   public uiMain: UIMain = null;
+
+  @property(AudioManager)
+  /** 音频管理实例 */
+  public audioManager: AudioManager = null;
 
   /** 游戏状态 */
   public gameState = Constant.GameState.GAME_START;
@@ -133,10 +139,13 @@ export class GameManager extends Component {
     if (this._isShooting && this._currShootTime > this.shootTime) {
       if (this._bulletType === Constant.BulletPropType.BULLET_H) {
         this.createPlayerBulletH();
+        this.playAudioEffect('bullet2');
       } else if (this._bulletType === Constant.BulletPropType.BULLET_S) {
         this.createPlayerBulletS();
+        this.playAudioEffect('bullet2');
       } else {
         this.createPlayerBulletM();
+        this.playAudioEffect('bullet1');
       }
       this._currShootTime = 0;
     }
@@ -408,5 +417,12 @@ export class GameManager extends Component {
     for (let i = children.length - 1; i >= 0; i--) {
       children[i].destroy();
     }
+  }
+
+  /**
+   * 播放音效
+   */
+  public playAudioEffect(name: string) {
+    this.audioManager.play(name);
   }
 }
