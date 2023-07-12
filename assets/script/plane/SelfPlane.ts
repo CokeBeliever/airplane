@@ -4,6 +4,17 @@ const { ccclass } = _decorator;
 
 @ccclass("SelfPlane")
 export class SelfPlane extends Component {
+  /** 生命值 */
+  public lifeValue = 5;
+
+  /** 当前生命值 */
+  private _currLife = this.lifeValue;
+
+  /** 是否已死亡 */
+  get isDie() {
+    return this._currLife <= 0;
+  }
+
   start() {}
 
   update(deltaTime: number) {}
@@ -24,7 +35,11 @@ export class SelfPlane extends Component {
       collisionGroup === Constant.CollisionType.ENEMY_PLANE ||
       collisionGroup === Constant.CollisionType.ENEMY_BULLET
     ) {
-        console.log('reduce blood');
+      this._currLife--;
     }
+  }
+
+  init() {
+    this._currLife = this.lifeValue;
   }
 }
