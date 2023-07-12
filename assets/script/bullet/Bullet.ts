@@ -1,8 +1,10 @@
 import { _decorator, Collider, Component, ITriggerEvent, Node } from "cc";
 import { Constant } from "../framework/Constant";
+import { PoolManager } from "../framework/PoolManager";
 const { ccclass, property } = _decorator;
 
 const OUTOFRANGE = 50;
+const poolManager = PoolManager.instance();
 
 @ccclass("Bullet")
 export class Bullet extends Component {
@@ -28,7 +30,7 @@ export class Bullet extends Component {
     if (
       this._isEnemyPlane ? moveLength > OUTOFRANGE : moveLength < -OUTOFRANGE
     ) {
-      this.node.destroy();
+      poolManager.putNode(this.node);
     }
   }
 
@@ -42,13 +44,17 @@ export class Bullet extends Component {
     collider.off("onTriggerEnter", this._onTriggerEnter, this);
   }
 
-  show(speed: number, isEnemyPlane: boolean, direction: number = Constant.Direction.MIDDLE) {
+  show(
+    speed: number,
+    isEnemyPlane: boolean,
+    direction: number = Constant.Direction.MIDDLE
+  ) {
     this._bulletSpeed = speed;
     this._direction = direction;
     this._isEnemyPlane = isEnemyPlane;
   }
 
   private _onTriggerEnter(event: ITriggerEvent) {
-    this.node.destroy();
+    poolManager.putNode(this.node);
   }
 }

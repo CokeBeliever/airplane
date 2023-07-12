@@ -1,9 +1,18 @@
-import { _decorator, Collider, Component, ITriggerEvent, Node, Prefab } from "cc";
+import {
+  _decorator,
+  Collider,
+  Component,
+  ITriggerEvent,
+  Node,
+  Prefab,
+} from "cc";
 import { GameManager } from "../framework/GameManager";
 import { Constant } from "../framework/Constant";
+import { PoolManager } from "../framework/PoolManager";
 const { ccclass, property } = _decorator;
 
 const OUTOFBOUNCE = 50;
+const poolManager = PoolManager.instance();
 
 @ccclass("EnemyPlane")
 export class EnemyPlane extends Component {
@@ -35,7 +44,7 @@ export class EnemyPlane extends Component {
     }
 
     if (movePos > OUTOFBOUNCE) {
-      this.node.destroy();
+      poolManager.putNode(this.node);
     }
   }
 
@@ -61,9 +70,9 @@ export class EnemyPlane extends Component {
       collisionGroup === Constant.CollisionType.SELF_PLANE ||
       collisionGroup === Constant.CollisionType.SELF_BULLET
     ) {
-        this.node.destroy();
-        this._gameManager.addScore();
-        this._gameManager.playAudioEffect('enemy');
+      poolManager.putNode(this.node);
+      this._gameManager.addScore();
+      this._gameManager.playAudioEffect("enemy");
     }
   }
 }
