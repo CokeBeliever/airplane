@@ -15,6 +15,14 @@ export class SelfPlane extends Component {
   @property(Node)
   public explode: Node = null;
 
+  @property(Node)
+  /** 血条节点 */
+  public blood: Node = null;
+
+  @property(Node)
+  /** 血条值节点 */
+  public bloodFace: Node = null;
+
   /** 生命值 */
   public lifeValue = 5;
 
@@ -51,11 +59,17 @@ export class SelfPlane extends Component {
       collisionGroup === Constant.CollisionType.ENEMY_PLANE ||
       collisionGroup === Constant.CollisionType.ENEMY_BULLET
     ) {
+      if (this._currLife === this.lifeValue) {
+        this.blood.active = true;
+      }
+
       this._currLife--;
+      this.bloodFace.setScale(this._currLife / this.lifeValue, 1, 1);
 
       if (this._currLife <= 0) {
         this._audioSource.play();
         this.explode.active = true;
+        this.blood.active = false;
       }
     }
   }
@@ -63,5 +77,7 @@ export class SelfPlane extends Component {
   init() {
     this._currLife = this.lifeValue;
     this.explode.active = false;
+    this.blood.active = false;
+    this.bloodFace.setScale(1, 1, 1);
   }
 }
