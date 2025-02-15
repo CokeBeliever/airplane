@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.4",
+  "__version__": "1.0.6",
   "general": {
     "designResolution": {
       "width": 720,
@@ -37,5 +37,8 @@
       "4": 2,
       "5": 2
     }
+  },
+  "script": {
+    "preserveSymlinks": true
   }
 }
