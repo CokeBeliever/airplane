@@ -2,81 +2,33 @@
   "__version__": "1.3.8",
   "bundleConfig": {
     "custom": {
-      "auto_25DdXwl6lIJrv4ewl2JUpk": {
-        "displayName": "res",
+      "default": {
+        "displayName": "i18n:builder.asset_bundle.defaultConfig",
         "configs": {
           "native": {
             "preferredOptions": {
-              "compressionType": "merge_dep",
-              "isRemote": false
-            }
-          },
-          "miniGame": {
-            "configMode": "overwrite",
-            "overwriteSettings": {
-              "alipay-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "taobao-creative-app": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "taobao-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "bytedance-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "oppo-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "huawei-quick-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "vivo-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "xiaomi-quick-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "baidu-mini-game": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "link-sure": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "qtt": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "cocos-play": {
-                "compressionType": "merge_dep",
-                "isRemote": false
-              },
-              "wechatgame": {
-                "compressionType": "merge_dep",
-                "isRemote": true
-              }
+              "isRemote": false,
+              "compressionType": "merge_dep"
             }
           },
           "web": {
             "preferredOptions": {
-              "compressionType": "merge_dep",
-              "isRemote": false
+              "isRemote": false,
+              "compressionType": "merge_dep"
             },
+            "fallbackOptions": {
+              "compressionType": "merge_dep"
+            }
+          },
+          "miniGame": {
+            "fallbackOptions": {
+              "isRemote": false,
+              "compressionType": "merge_dep"
+            },
+            "configMode": "overwrite",
             "overwriteSettings": {
-              "web-desktop": {
-                "compressionType": "merge_dep",
-                "isRemote": true
+              "wechatgame": {
+                "compressionType": "subpackage"
               }
             }
           }
